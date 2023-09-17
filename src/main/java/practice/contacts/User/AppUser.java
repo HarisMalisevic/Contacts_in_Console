@@ -1,4 +1,7 @@
-package practice.contacts;
+package practice.contacts.User;
+
+import practice.contacts.identifiers.HumanName;
+import practice.contacts.identifiers.PhoneNumber;
 
 public class AppUser {
 

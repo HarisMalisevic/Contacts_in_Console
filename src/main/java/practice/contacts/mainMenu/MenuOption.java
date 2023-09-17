@@ -1,9 +1,9 @@
 package practice.contacts.mainMenu;
 
-public class MenuOptions {
+public class MenuOption {
     private String optionMessage;
 
-    public MenuOptions(String optionMessage) {
+    public MenuOption(String optionMessage) {
         this.optionMessage = optionMessage;
     }
 
