@@ -1,4 +1,4 @@
-package practice.contacts;
+package practice.contacts.mainMenu;
 
 import practice.contacts.mainMenu.MenuOption;
 import practice.contacts.mainMenu.Menu;
@@ -23,6 +23,7 @@ public class MainMenu {
 
         this.mainMenu.getMenuOptionList().clear();
 
+        this.mainMenu.addOptionToMenu(new MenuOption("Exit"));
         this.mainMenu.addOptionToMenu(new MenuOption("Add Contact"));
         this.mainMenu.addOptionToMenu(new MenuOption("Read Contact List"));
         this.mainMenu.addOptionToMenu(new MenuOption("Remove Contact"));
@@ -35,8 +36,8 @@ public class MainMenu {
 
         int optionCounter = 0;
         for (MenuOption menuOption : mainMenu.getMenuOptionList()) {
-            optionCounter++;
             out.println(optionCounter + ". " + menuOption.getOptionMessage());
+            optionCounter++;
         }
     }
 

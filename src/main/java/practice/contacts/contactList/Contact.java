@@ -1,4 +1,4 @@
-package practice.contacts;
+package practice.contacts.contactList;
 
 
 import practice.contacts.identifiers.HumanName;

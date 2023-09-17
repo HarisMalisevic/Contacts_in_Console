@@ -27,7 +27,7 @@ public class PhoneNumber {
     }
 
     public String getPhoneNumber() {
-        return "+" + countryCode + " " + localNumber;
+        return "("+countryCode +")"+ " " + localNumber;
     }
 
 

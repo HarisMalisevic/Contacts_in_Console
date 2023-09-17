@@ -9,19 +9,23 @@ public class Menu {
     private String mainMessage;
     private List<MenuOption> menuOptionList;
 
+    int numberOfOptions = 0;
+
 
     public Menu() {
         this.mainMessage = "Hello user!";
         this.menuOptionList = new ArrayList<>();
+        this.numberOfOptions = 0;
     }
 
     public Menu(String mainMessage) {
         this.mainMessage = mainMessage;
 
         this.menuOptionList = new ArrayList<>();
+        this.numberOfOptions = 0;
     }
 
-    public void addOptionToMenu(MenuOption newOption){
+    public void addOptionToMenu(MenuOption newOption) {
         this.menuOptionList.add(newOption);
     }
 
@@ -39,5 +43,5 @@ public class Menu {
 
     public void setMenuOptionList(List<MenuOption> menuOptionList) {
         this.menuOptionList = menuOptionList;
-}
+    }
 }
