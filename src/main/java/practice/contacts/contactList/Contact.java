@@ -41,4 +41,12 @@ public class Contact {
 
 
     }
+
+    public void enterContactInformation(){
+        HumanName newHumanName;
+        PhoneNumber newPhoneNumber;
+
+        //TO DO
+
+    }
 }
