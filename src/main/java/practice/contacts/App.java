@@ -12,7 +12,7 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         PrintStream out = System.out;
         Scanner input = new Scanner(System.in);
@@ -33,14 +33,13 @@ public class App {
         // Main loop
         do {
             mainMenu.printMainMenu();
+
             mainUserInput = input.nextInt();
 
-            // TO DO:
-            // NEED TO ADD CALL FOR EACH OF OPTIONS IN MENU!!!!!!!
-            //
+            mainMenu.runMenuOption(mainUserInput);
 
 
-        } while (mainUserInput != 0);
+        } while (mainUserInput != 1);
 
         //System.out.println("Hello select your account: ");
 

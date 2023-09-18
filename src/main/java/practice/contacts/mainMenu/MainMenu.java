@@ -2,6 +2,10 @@ package practice.contacts.mainMenu;
 
 import practice.contacts.mainMenu.MenuOption;
 import practice.contacts.mainMenu.Menu;
+import practice.contacts.options.AddContact;
+import practice.contacts.options.ExitContacts;
+import practice.contacts.options.ReadContacts;
+import practice.contacts.options.RemoveContact;
 
 
 import java.util.ArrayList;
@@ -23,10 +27,10 @@ public class MainMenu {
 
         this.mainMenu.getMenuOptionList().clear();
 
-        this.mainMenu.addOptionToMenu(new MenuOption("Exit"));
-        this.mainMenu.addOptionToMenu(new MenuOption("Add Contact"));
-        this.mainMenu.addOptionToMenu(new MenuOption("Read Contact List"));
-        this.mainMenu.addOptionToMenu(new MenuOption("Remove Contact"));
+        this.mainMenu.addOptionToMenu(new MenuOption("Exit"), new ExitContacts());
+        this.mainMenu.addOptionToMenu(new MenuOption("Add Contact"),new AddContact());
+        this.mainMenu.addOptionToMenu(new MenuOption("Read Contact List"), new ReadContacts());
+        this.mainMenu.addOptionToMenu(new MenuOption("Remove Contact"), new RemoveContact());
     }
 
     public void printMainMenu() {
@@ -39,6 +43,14 @@ public class MainMenu {
             out.println(optionCounter + ". " + menuOption.getOptionMessage());
             optionCounter++;
         }
+    }
+
+    public List<MenuOption> getMainMenuOptionList(){
+        return this.mainMenu.getMenuOptionList();
+    }
+
+    public void runMenuOption(int userInput){
+        this.mainMenu.getMenuOptionList().get(userInput).runMenuOption();
     }
 
 }
