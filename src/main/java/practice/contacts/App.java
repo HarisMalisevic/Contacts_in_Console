@@ -7,7 +7,6 @@ import practice.contacts.identifiers.HumanName;
 import practice.contacts.identifiers.PhoneNumber;
 import practice.contacts.mainMenu.MainMenu;
 
-import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class App {
 
         Contact haris = new Contact(name, number);
 
-        int mainUserInput = 0;
+        int mainUserInput;
 
         // Main loop
         do {
@@ -36,17 +35,11 @@ public class App {
 
             mainUserInput = input.nextInt();
 
-            try {
+
                 mainMenu.runMenuOption(mainUserInput);
-            } catch (Exception outOfBounds){
-                out.println(outOfBounds.getMessage());
-                System.exit(1);
-            }
+
 
         } while (mainUserInput != 1);
-
-        //System.out.println("Hello select your account: ");
-
 
         haris.printContactInformation();
 

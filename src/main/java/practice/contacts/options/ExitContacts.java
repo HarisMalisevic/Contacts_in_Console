@@ -1,12 +1,13 @@
 package practice.contacts.options;
 
 import java.io.PrintStream;
+import practice.contacts.User.AppUser;
 
 public class ExitContacts implements FunctionOfOption {
 
 
     @Override
-    public void runOption() {
+    public void runOption(AppUser appUser) {
         PrintStream out = System.out;
         out.println("Thank you. Good bye!");
         System.exit(0);

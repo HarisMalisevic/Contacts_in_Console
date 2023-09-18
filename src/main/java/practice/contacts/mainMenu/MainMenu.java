@@ -49,10 +49,13 @@ public class MainMenu {
         return this.mainMenu.getMenuOptionList();
     }
 
-    public void runMenuOption(int userInput) throws Exception {
+    public void runMenuOption(int userInput) {
 
-        Exception IndexOutOfBoundsException = new Exception("Option does not exist!");
-        if (userInput<0 || userInput>= mainMenu.numberOfOptions) throw IndexOutOfBoundsException;
+
+        if (userInput<0 || userInput>= mainMenu.numberOfOptions) {
+            System.out.println("Option does not exist!");
+            return;
+        }
 
         this.mainMenu.runOption(userInput);
     }
