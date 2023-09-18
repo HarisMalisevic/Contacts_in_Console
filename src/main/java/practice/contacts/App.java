@@ -36,8 +36,12 @@ public class App {
 
             mainUserInput = input.nextInt();
 
-            mainMenu.runMenuOption(mainUserInput);
-
+            try {
+                mainMenu.runMenuOption(mainUserInput);
+            } catch (Exception outOfBounds){
+                out.println(outOfBounds.getMessage());
+                System.exit(1);
+            }
 
         } while (mainUserInput != 1);
 
