@@ -42,4 +42,8 @@ public class Menu {
         this.menuOptionList = menuOptionList;
     }
 
+    public void runOption(int userInput){
+        this.getMenuOptionList().get(userInput).runMenuOption();
+    }
+
 }

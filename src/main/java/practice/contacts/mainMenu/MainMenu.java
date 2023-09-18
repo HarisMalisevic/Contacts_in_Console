@@ -50,7 +50,7 @@ public class MainMenu {
     }
 
     public void runMenuOption(int userInput){
-        this.mainMenu.getMenuOptionList().get(userInput).runMenuOption();
+        this.mainMenu.runOption(userInput);
     }
 
 }
